@@ -2,7 +2,7 @@
 
 
 
-1. git clone https://github.com/swhzzz/myVue.git
+1. git clone `https://github.com/swhzzz/myVue.git`
 2. npm i
 3. open index.html
 
