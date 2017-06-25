@@ -1,0 +1,35 @@
+#app {
+    width: 500px;
+    margin: 100px auto 0 auto;
+}
+
+.planTodo>input {
+    width: 100%;
+}
+
+.todos>li {
+    position: relative;
+}
+
+.time {
+    position: absolute;
+    top: 0;
+    right: 100px;
+}
+
+.time>span {
+    width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.isdone {
+    position: absolute;
+    top: 0;
+    right: 40px;
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+}
