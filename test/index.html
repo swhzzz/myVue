@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <script src='./dist/bundle.js' defer></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <section>
+            <div>
+                <label>
+                        注册<input type="radio" name="signupOrLogin" value="signup" v-model="type">
+                </label>
+                <label>
+                        登录<input type="radio" name="signupOrLogin" value="login" v-model="type">
+                </label>
+            </div>
+            <form>
+                <div>
+                    <label>
+                        用户名<input type="text" >
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        密&nbsp;&nbsp;&nbsp;码<input type="password">
+                    </label>
+                </div>
+                <input type="submit" value="注册" v-if="type=='signup'">
+                <input type="submit" value="登录" v-if="type=='login'">
+            </form>
+        </section>
+        <section>
+            <input v-model="newTodo" @keypress.enter="addTodo">
+            <ol>
+                <li v-for="todo in todos">
+                    <input type="checkbox" v-model="todo.done">{{todo.content}}
+                    <span v-if="todo.done">已完成</span>
+                    <span v-else>未完成</span>
+                    <button @click="delTodo(todo)">X</button>
+                </li>
+            </ol>
+        </section>
+    </div>
+</body>
+
+</html>
